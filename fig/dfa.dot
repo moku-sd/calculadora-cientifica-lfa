@@ -1,0 +1,23 @@
+digraph A { rankdir=LR; nodesep=0.45; ranksep=0.7; node [shape=circle,fontname="DejaVu Sans",fontsize=13]; edge [fontname="DejaVu Sans",fontsize=13,arrowsize=0.8];
+start [shape=point,width=0.01,label=""];
+"A0" [label="A0\n{q0}",shape=circle];
+"A1" [label="A1\n{q1,q4}",shape=doublecircle];
+"A2" [label="A2\n{q3}",shape=circle];
+"A3" [label="A3\n{q2,q4}",shape=doublecircle];
+"A4" [label="A4\n{q5,q6}",shape=circle];
+"A5" [label="A5\n{q7}",shape=doublecircle];
+"A6" [label="A6\n{q6}",shape=circle];
+start -> "A0";
+"A0" -> "A1" [label="d"];
+"A0" -> "A2" [label="p"];
+"A1" -> "A1" [label="d"];
+"A1" -> "A3" [label="p"];
+"A1" -> "A4" [label="x"];
+"A2" -> "A3" [label="d"];
+"A3" -> "A3" [label="d"];
+"A3" -> "A4" [label="x"];
+"A4" -> "A5" [label="d"];
+"A4" -> "A6" [label="s"];
+"A5" -> "A5" [label="d"];
+"A6" -> "A5" [label="d"];
+}
